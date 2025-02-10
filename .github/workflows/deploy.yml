@@ -31,6 +31,8 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}  # GitHub token to push to the gh-pages branch
-          publish_dir: ./public  # The Hugo output directory (by default, it’s `./public`)
-          publish_branch: gh-pages  # The branch where the built files will be pushed
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
+          user_name: 'github-actions[bot]'  # Add user name for commits
+          user_email: 'github-actions[bot]@users.noreply.github.com'  # Add email for commits
