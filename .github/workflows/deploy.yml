@@ -11,6 +11,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest  # Use an Ubuntu runner for the build
+    
+    permissions:
+      contents: write  # Grants write access to the contents of the repository (i.e., push to a branch)
 
     steps:
       # 1. Checkout the code
