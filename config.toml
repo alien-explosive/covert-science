@@ -17,7 +17,7 @@ enableRobotsTXT = true
 #disqusShortname = ""
 
 [params]
-
+postcss = true
   showBlog = true
   mainSections = ['blog']
 
