@@ -1,5 +1,9 @@
 module.exports = {
-  content: ["./**/*.html", "./**/*.md", "./config.toml"],
+  content: [
+    "./layouts/**/*.html",    // Ensure all HTML files in the layouts directory are included
+    "./content/**/*.md",      // Include Markdown files in the content directory (adjust based on your structure)
+    "./themes/**/*.html"      // Include HTML files in any themes directory (if applicable)
+  ],
   theme: {
     extend: {
       colors: {
@@ -12,6 +16,5 @@ module.exports = {
       }
     }
   },
-  variants: {},
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [require("@tailwindcss/typography")], // TailwindCSS typography plugin
 };
