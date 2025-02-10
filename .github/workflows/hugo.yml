@@ -40,11 +40,11 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Install Node.js dependencies
         run: |
-          # Install PostCSS and any other needed dependencies
+          # Install PostCSS, TailwindCSS, and other dependencies
           npm install
-      - name: Install PostCSS globally
+      - name: Install PostCSS and TailwindCSS
         run: |
-          npm install -g postcss-cli autoprefixer
+          npm install -g postcss-cli @tailwindcss/postcss autoprefixer
       - name: Build with Hugo
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
